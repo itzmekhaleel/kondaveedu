@@ -11,7 +11,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative h-64 w-full overflow-hidden">
         <img 
-          src="https://picsum.photos/seed/kondaveedu/800/600" 
+          src="/home1.jpeg" 
           alt="Kondaveedu Fort Hero" 
           className="w-full h-full object-cover"
         />

@@ -16,9 +16,9 @@ const LandingPage: React.FC = () => {
     <div className="relative h-screen w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-between py-12 px-8">
       {/* Full Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1590050752117-23a9d7f28243?q=80&w=1200&auto=format&fit=crop" 
-          alt="Kondaveedu Fort Background" 
+        <img
+          src="/landimg.jpeg"
+          alt="Kondaveedu Fort Background"
           className="w-full h-full object-cover transition-transform duration-[10000ms] scale-110 animate-pulse-slow"
           style={{ animationDuration: '20s' }}
         />
@@ -49,9 +49,9 @@ const LandingPage: React.FC = () => {
             <i className="fa-solid fa-spinner animate-spin text-xl"></i>
           </div>
         </div>
-        
+
         {isLoaded && (
-          <button 
+          <button
             onClick={() => navigate('/dashboard')}
             className="bg-white text-slate-900 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest shadow-2xl active:scale-95 transition-all animate-fadeIn"
           >
@@ -71,7 +71,7 @@ const LandingPage: React.FC = () => {
             <div className="text-white text-xs font-medium">Kondaveedu Fort, Guntur District</div>
           </div>
         </div>
-        
+
         <p className="text-white/40 text-[10px] mt-8 uppercase tracking-[0.2em] font-medium">
           Scroll to discover more
         </p>
