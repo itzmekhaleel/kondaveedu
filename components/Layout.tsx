@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const isLanding = location.pathname === '/';
 
   return (
-    <div className="flex flex-col min-h-screen w-full md:max-w-md mx-auto bg-white shadow-xl relative overflow-x-hidden">
+    <div className="flex flex-col min-h-screen w-full lg:max-w-md mx-auto bg-white shadow-xl relative overflow-x-hidden">
       {/* Mobile-Style Header */}
       {!isLanding && (
         <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 animate-slideDown">
@@ -52,7 +52,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
 
       {/* Mobile-Style Bottom Navigation */}
-      <footer className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full md:max-w-md bg-white/95 backdrop-blur-md border-t border-gray-100 px-6 py-3 z-50 shadow-[0_-8px_30px_rgba(0,0,0,0.08)]">
+      <footer className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full lg:max-w-md bg-white/95 backdrop-blur-md border-t border-gray-100 px-6 py-3 z-50 shadow-[0_-8px_30px_rgba(0,0,0,0.08)]">
         <nav className="flex items-center justify-between">
           <NavLink
             to="/dashboard"
@@ -100,7 +100,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <i className="fa-solid fa-user text-xl"></i>
             <div className="flex flex-col items-center">
               <span className="text-[10px] font-bold">Profile</span>
-              <span className="text-[8px] text-gray-300 absolute -bottom-2">v2.1</span>
+              <span className="text-[8px] text-gray-300 absolute -bottom-2">v2.2</span>
             </div>
           </NavLink>
         </nav>
