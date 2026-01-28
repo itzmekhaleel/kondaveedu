@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import landImg from '../assets/landimg.jpeg';
+
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,7 +19,7 @@ const LandingPage: React.FC = () => {
       {/* Full Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/landimg.jpeg"
+          src={landImg}
           alt="Kondaveedu Fort Background"
           className="w-full h-full object-cover transition-transform duration-[10000ms] scale-110 animate-pulse-slow"
           style={{ animationDuration: '20s' }}
@@ -71,10 +73,6 @@ const LandingPage: React.FC = () => {
             <div className="text-white text-xs font-medium">Kondaveedu Fort, Guntur District</div>
           </div>
         </div>
-
-        <p className="text-white/40 text-[10px] mt-8 uppercase tracking-[0.2em] font-medium">
-          Scroll to discover more
-        </p>
       </footer>
     </div>
   );

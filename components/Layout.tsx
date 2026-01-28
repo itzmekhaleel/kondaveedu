@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const isLanding = location.pathname === '/';
 
   return (
-    <div className="flex flex-col min-h-screen w-full lg:max-w-md mx-auto bg-white shadow-xl relative overflow-x-hidden">
+    <div className="flex flex-col min-h-screen w-full lg:max-w-7xl mx-auto bg-white shadow-xl relative overflow-x-hidden">
       {/* Mobile-Style Header */}
       {!isLanding && (
         <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 p-4 animate-slideDown">
@@ -25,6 +25,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </div>
               <span className="font-bold text-lg tracking-tight text-gray-800">KONDAVEEDU</span>
             </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-8">
+              <NavLink to="/dashboard" className={({ isActive }) => `text-sm font-bold transition-colors ${isActive ? 'text-amber-600' : 'text-gray-500 hover:text-amber-600'}`}>Home</NavLink>
+              <NavLink to="/viewpoints" className={({ isActive }) => `text-sm font-bold transition-colors ${isActive ? 'text-amber-600' : 'text-gray-500 hover:text-amber-600'}`}>Explore</NavLink>
+              <NavLink to="/tickets" className={({ isActive }) => `text-sm font-bold transition-colors ${isActive ? 'text-amber-600' : 'text-gray-500 hover:text-amber-600'}`}>Book Tickets</NavLink>
+              <NavLink to="/history" className={({ isActive }) => `text-sm font-bold transition-colors ${isActive ? 'text-amber-600' : 'text-gray-500 hover:text-amber-600'}`}>History</NavLink>
+            </nav>
             <div className="flex items-center gap-4 text-gray-500">
               <button className="p-1 hover:text-amber-600 transition-colors">
                 <i className="fa-solid fa-bell"></i>
@@ -35,7 +43,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative lg:hidden">
             <i className="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
             <input
               type="text"
@@ -53,7 +61,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Mobile-Style Bottom Navigation */}
       {!isLanding && (
-        <footer className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full lg:max-w-md bg-white/95 backdrop-blur-md border-t border-gray-100 px-6 py-3 z-50 shadow-[0_-8px_30px_rgba(0,0,0,0.08)]">
+        <footer className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full lg:max-w-md bg-white/95 backdrop-blur-md border-t border-gray-100 px-6 py-3 z-50 shadow-[0_-8px_30px_rgba(0,0,0,0.08)] lg:hidden">
           <nav className="flex items-center justify-between">
             <NavLink
               to="/dashboard"
