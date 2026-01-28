@@ -98,7 +98,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             className={({ isActive }) => `flex flex-col items-center gap-1 transition-all duration-300 ${isActive ? 'text-amber-600 scale-110' : 'text-gray-400'}`}
           >
             <i className="fa-solid fa-user text-xl"></i>
-            <span className="text-[10px] font-bold">Profile</span>
+            <div className="flex flex-col items-center">
+              <span className="text-[10px] font-bold">Profile</span>
+              <span className="text-[8px] text-gray-300 absolute -bottom-2">v2.1</span>
+            </div>
           </NavLink>
         </nav>
       </footer>
